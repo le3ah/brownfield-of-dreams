@@ -13,7 +13,7 @@ describe 'dashboard' do
       expect(page).to have_content('Followers')
       within('.followers-list') do
         expect(page).to have_link(user_1_followers.first.login)
-        expect(page).to have_link("#{user_1_followers.last.login}")
+        expect(page).to have_link(user_1_followers.last.login)
         expect(page).to have_css(".follower")
       end
     end
