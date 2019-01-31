@@ -34,3 +34,14 @@
   </section>
   <% end %>
 </section>
+<% if @following.nil? == false %>
+<h2>Following</h2>
+<section class="following-list">
+  <ul>
+    <% @following.each do |follow| %>
+        <li><%= link_to "#{follow.login}", "#{follow.html_url}", class: "following"%></li>
+    <% end %>
+  </ul>
+</section>
+<% end %>
+</section>
