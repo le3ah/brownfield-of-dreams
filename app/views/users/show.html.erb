@@ -11,38 +11,42 @@
     <h1>Bookmarked Segments</h1>
   </section>
 
-  <% if @repos.nil? == false %>
-  <h2>Github</h2>
-  <section class="github-list">
-    <ul>
-      <% @repos.each do |repo| %>
-          <li><%= link_to "#{repo.name}", "#{repo.html_url}", class: "repository"%></li>
+<%= button_to "Connect to Github", github_login_path %>
+
+<% if current_user.oauth_token %>
+
+    <% if @repos.nil? == false %>
+    <h2>Github</h2>
+    <section class="github-list">
+      <ul>
+        <% @repos.each do |repo| %>
+            <li><%= link_to "#{repo.name}", "#{repo.html_url}", class: "repository"%></li>
+        <% end %>
+      </ul>
       <% end %>
-    </ul>
+    </section>
+
+    <% if @followers.nil? == false %>
+    <h2>Followers</h2>
+    <section class="followers-list">
+      <ul>
+        <% @followers.each do |follower| %>
+            <li><%= link_to "#{follower.login}", "#{follower.html_url}", class: "follower"%></li>
+        <% end %>
+      </ul>
+    </section>
     <% end %>
   </section>
 
-
-  <% if @followers.nil? == false %>
-  <h2>Followers</h2>
-  <section class="followers-list">
-    <ul>
-      <% @followers.each do |follower| %>
-          <li><%= link_to "#{follower.login}", "#{follower.html_url}", class: "follower"%></li>
-      <% end %>
-    </ul>
+    <% if @following.nil? == false %>
+    <h2>Following</h2>
+    <section class="following-list">
+      <ul>
+        <% @following.each do |follow| %>
+            <li><%= link_to "#{follow.login}", "#{follow.html_url}", class: "following"%></li>
+        <% end %>
+      </ul>
+    </section>
+    <% end %>
   </section>
-  <% end %>
-</section>
-
-  <% if @following.nil? == false %>
-  <h2>Following</h2>
-  <section class="following-list">
-    <ul>
-      <% @following.each do |follow| %>
-          <li><%= link_to "#{follow.login}", "#{follow.html_url}", class: "following"%></li>
-      <% end %>
-    </ul>
-  </section>
-  <% end %>
-</section>
+<% end %>
