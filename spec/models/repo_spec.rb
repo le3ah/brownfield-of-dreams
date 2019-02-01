@@ -19,10 +19,10 @@ end
 
 describe 'class methods', :vcr do
   it ".find_all_repos" do
-    user = create(:user, token: "tokentoken")
-    token = user.token
-    repos = Repo.find_all_repos(token)
-    
+    user = create(:user)
+    oauth_token = user.oauth_token
+    repos = Repo.find_all_repos(oauth_token)
+
     expect(repos.count).to eq(5)
     expect(repos.first).to be_an_instance_of(Repo)
   end

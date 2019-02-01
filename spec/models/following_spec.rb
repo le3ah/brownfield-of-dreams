@@ -19,9 +19,9 @@ describe Following do
 
   describe 'class methods', :vcr do
     it ".find_all_following" do
-      user = create(:user, token: "tokentoken")
-      token = user.token
-      followers = Following.find_all_following(token)
+      user = create(:user)
+      oauth_token = user.oauth_token
+      followers = Following.find_all_following(oauth_token)
 
       expect(followers.first).to be_an_instance_of(Following)
     end
