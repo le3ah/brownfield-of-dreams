@@ -5,8 +5,8 @@ class Repo
     @name = attributes[:name]
   end
 
-  def self.find_all_repos(token)
-    data = GithubService.find_repos(token)
+  def self.find_all_repos(oauth_token)
+    data = GithubService.find_repos(oauth_token)
     data.map do |raw_repo|
       Repo.new(raw_repo)
     end

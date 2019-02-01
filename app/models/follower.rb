@@ -5,8 +5,8 @@ class Follower
     @html_url = attributes[:html_url]
   end
 
-  def self.find_all_followers(token)
-    data = GithubService.find_followers(token)
+  def self.find_all_followers(oauth_token)
+    data = GithubService.find_followers(oauth_token)
     data.map do |raw_follower|
       Follower.new(raw_follower)
     end

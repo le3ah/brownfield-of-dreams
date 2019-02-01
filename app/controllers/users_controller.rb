@@ -1,10 +1,9 @@
 class UsersController < ApplicationController
   def show
-    user = current_user
-    if user.token
-      @repos = Repo.find_all_repos(user.token)
-      @followers = Follower.find_all_followers(user.token)
-      @following = Following.find_all_following(user.token)
+    if current_user.oauth_token
+      @repos = Repo.find_all_repos(current_user.oauth_token)
+      @followers = Follower.find_all_followers(current_user.oauth_token)
+      @following = Following.find_all_following(current_user.oauth_token)
     else
       @repos = nil
       @followers = nil
