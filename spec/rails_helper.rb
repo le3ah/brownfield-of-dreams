@@ -9,6 +9,17 @@ require 'vcr'
 require 'webmock/rspec'
 require 'figaro'
 
+
+def stub_omniauth
+  OmniAuth.config.test_mode = true
+  omniauth_hash = { 'provider': 'github',
+                    'uid': '12345',
+                    'credentials': {'token': "12345"}
+  }
+
+  OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new(omniauth_hash)
+end 
+
 VCR.configure do |config|
   config.ignore_localhost = true
   config.cassette_library_dir = 'spec/cassettes'
