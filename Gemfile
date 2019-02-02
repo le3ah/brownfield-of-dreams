@@ -38,13 +38,14 @@ group :development, :test do
   gem 'launchy'
   gem 'shoulda-matchers'
   gem 'awesome_print'
-  gem 'webmock'
   gem 'simplecov'
   gem 'vcr'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
 end
-
+group :test do
+  gem 'webmock'
+end
 group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
