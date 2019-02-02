@@ -17,6 +17,8 @@
 /storage/*
 /coverage
 
+/spec/cassettes
+
 /node_modules
 /yarn-error.log
 
