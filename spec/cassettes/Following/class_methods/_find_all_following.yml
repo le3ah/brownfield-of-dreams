@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Thu, 31 Jan 2019 21:02:34 GMT
+      - Sat, 02 Feb 2019 19:29:58 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -33,9 +33,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4922'
+      - '4966'
       X-Ratelimit-Reset:
-      - '1548971027'
+      - '1549137356'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
@@ -67,10 +67,10 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - D82F:0FEE:1099BC5:2169FC3:5C53626A
+      - FCEE:5C53:5A0577:C595D3:5C55EFB6
     body:
       encoding: ASCII-8BIT
       string: '[{"login":"justinmauldin7","id":37850013,"node_id":"MDQ6VXNlcjM3ODUwMDEz","avatar_url":"https://avatars1.githubusercontent.com/u/37850013?v=4","gravatar_id":"","url":"https://api.github.com/users/justinmauldin7","html_url":"https://github.com/justinmauldin7","followers_url":"https://api.github.com/users/justinmauldin7/followers","following_url":"https://api.github.com/users/justinmauldin7/following{/other_user}","gists_url":"https://api.github.com/users/justinmauldin7/gists{/gist_id}","starred_url":"https://api.github.com/users/justinmauldin7/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/justinmauldin7/subscriptions","organizations_url":"https://api.github.com/users/justinmauldin7/orgs","repos_url":"https://api.github.com/users/justinmauldin7/repos","events_url":"https://api.github.com/users/justinmauldin7/events{/privacy}","received_events_url":"https://api.github.com/users/justinmauldin7/received_events","type":"User","site_admin":false},{"login":"mgoodhart5","id":40919519,"node_id":"MDQ6VXNlcjQwOTE5NTE5","avatar_url":"https://avatars2.githubusercontent.com/u/40919519?v=4","gravatar_id":"","url":"https://api.github.com/users/mgoodhart5","html_url":"https://github.com/mgoodhart5","followers_url":"https://api.github.com/users/mgoodhart5/followers","following_url":"https://api.github.com/users/mgoodhart5/following{/other_user}","gists_url":"https://api.github.com/users/mgoodhart5/gists{/gist_id}","starred_url":"https://api.github.com/users/mgoodhart5/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/mgoodhart5/subscriptions","organizations_url":"https://api.github.com/users/mgoodhart5/orgs","repos_url":"https://api.github.com/users/mgoodhart5/repos","events_url":"https://api.github.com/users/mgoodhart5/events{/privacy}","received_events_url":"https://api.github.com/users/mgoodhart5/received_events","type":"User","site_admin":false},{"login":"le3ah","id":42391567,"node_id":"MDQ6VXNlcjQyMzkxNTY3","avatar_url":"https://avatars2.githubusercontent.com/u/42391567?v=4","gravatar_id":"","url":"https://api.github.com/users/le3ah","html_url":"https://github.com/le3ah","followers_url":"https://api.github.com/users/le3ah/followers","following_url":"https://api.github.com/users/le3ah/following{/other_user}","gists_url":"https://api.github.com/users/le3ah/gists{/gist_id}","starred_url":"https://api.github.com/users/le3ah/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/le3ah/subscriptions","organizations_url":"https://api.github.com/users/le3ah/orgs","repos_url":"https://api.github.com/users/le3ah/repos","events_url":"https://api.github.com/users/le3ah/events{/privacy}","received_events_url":"https://api.github.com/users/le3ah/received_events","type":"User","site_admin":false},{"login":"danbriechle","id":42418816,"node_id":"MDQ6VXNlcjQyNDE4ODE2","avatar_url":"https://avatars0.githubusercontent.com/u/42418816?v=4","gravatar_id":"","url":"https://api.github.com/users/danbriechle","html_url":"https://github.com/danbriechle","followers_url":"https://api.github.com/users/danbriechle/followers","following_url":"https://api.github.com/users/danbriechle/following{/other_user}","gists_url":"https://api.github.com/users/danbriechle/gists{/gist_id}","starred_url":"https://api.github.com/users/danbriechle/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/danbriechle/subscriptions","organizations_url":"https://api.github.com/users/danbriechle/orgs","repos_url":"https://api.github.com/users/danbriechle/repos","events_url":"https://api.github.com/users/danbriechle/events{/privacy}","received_events_url":"https://api.github.com/users/danbriechle/received_events","type":"User","site_admin":false},{"login":"Mackenzie-Frey","id":42525195,"node_id":"MDQ6VXNlcjQyNTI1MTk1","avatar_url":"https://avatars0.githubusercontent.com/u/42525195?v=4","gravatar_id":"","url":"https://api.github.com/users/Mackenzie-Frey","html_url":"https://github.com/Mackenzie-Frey","followers_url":"https://api.github.com/users/Mackenzie-Frey/followers","following_url":"https://api.github.com/users/Mackenzie-Frey/following{/other_user}","gists_url":"https://api.github.com/users/Mackenzie-Frey/gists{/gist_id}","starred_url":"https://api.github.com/users/Mackenzie-Frey/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Mackenzie-Frey/subscriptions","organizations_url":"https://api.github.com/users/Mackenzie-Frey/orgs","repos_url":"https://api.github.com/users/Mackenzie-Frey/repos","events_url":"https://api.github.com/users/Mackenzie-Frey/events{/privacy}","received_events_url":"https://api.github.com/users/Mackenzie-Frey/received_events","type":"User","site_admin":false}]'
     http_version: 
-  recorded_at: Thu, 31 Jan 2019 21:02:18 GMT
+  recorded_at: Sat, 02 Feb 2019 19:29:38 GMT
 recorded_with: VCR 4.0.0
