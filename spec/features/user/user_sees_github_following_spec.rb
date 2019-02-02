@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'dashboard' do
   context 'as a logged in user with a token' do
     it "sees a Following section within the Github section", :vcr do
-      user_1 = create(:user, oauth_token: "cheezytoken")
+      user_1 = create(:user, oauth_token: ENV["GITHUB_TOKEN"])
       token_1 = user_1.oauth_token
       user_1_followers = Following.find_all_following(token_1)
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user_1)

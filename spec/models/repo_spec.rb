@@ -19,7 +19,7 @@ end
 
 describe 'class methods', :vcr do
   it ".find_all_repos" do
-    user = create(:user, oauth_token: "tokentoken")
+    user = create(:user, oauth_token: ENV["GITHUB_TOKEN"])
     token = user.oauth_token
     repos = Repo.find_all_repos(token)
 

@@ -19,7 +19,7 @@ describe Following do
 
   describe 'class methods', :vcr do
     it ".find_all_following" do
-      user = create(:user, oauth_token: "tokentoken")
+      user = create(:user, oauth_token: ENV["GITHUB_TOKEN"])
       token = user.oauth_token
       followers = Following.find_all_following(token)
 
