@@ -13,17 +13,22 @@ VCR.configure do |config|
   config.ignore_localhost = true
   config.cassette_library_dir = 'spec/cassettes'
   config.hook_into :webmock
+  config.allow_http_connections_when_no_cassette = true
   config.configure_rspec_metadata!
   config.filter_sensitive_data("<YOUTUBE_API_KEY>") { ENV['YOUTUBE_API_KEY'] }
   config.filter_sensitive_data("<GITHUB_TOKEN>") { ENV['GITHUB_TOKEN'] }
 end
-
+def stub_get_json(url, filename)
+  json_response = File.open("./spec/fixtures/#{filename}")
+  stub_request(:get, "#{url}").
+    to_return(status: 200, body: json_response)
+end
 def stub_omniauth
   OmniAuth.config.test_mode = true
   omniauth_hash = { 'provider' => 'github',
                     'uid' => '12345',
                     'credentials' => {
-                      'token' => 'w1a2n3d4a5'
+                      'token' => ENV["GITHUB_TOKEN"]
                       }
                     }
   OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new(omniauth_hash)
