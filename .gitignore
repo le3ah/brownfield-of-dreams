@@ -26,6 +26,7 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /spec/fixtures
+/spec/cassettes
 
 # Ignore application configuration
 
