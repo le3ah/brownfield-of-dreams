@@ -37,7 +37,7 @@
 
         <% if follower.has_account? %>
             <li><%= link_to "#{follower.login}", "#{follower.html_url}" %>
-            <%= link_to "Add #{follower.login} as Friend", user_friendships_path(current_user.id), :method => :post %></li>
+            <%= link_to "Add as Friend", user_friendships_path(current_user.id), :method => :post %></li>
         <% else  %>
           <li><%= link_to "#{follower.login}", "#{follower.html_url}" %></li>
         <% end %>
