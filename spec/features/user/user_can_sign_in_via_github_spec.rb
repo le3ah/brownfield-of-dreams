@@ -2,9 +2,9 @@ require 'rails_helper'
 
 describe 'login' do
   it "can sign in via Github", :vcr do
-    stub_omniauth
     user_1 = create(:user)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user_1)
+    stub_omniauth
 
     visit '/dashboard'
 
