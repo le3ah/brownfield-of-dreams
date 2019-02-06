@@ -1,8 +1,15 @@
 class Github::SessionsController < ApplicationController
   def create
-    if user = User.from_omniauth(request.env["omniauth.auth"], current_user)
-      session[:user_id] = user.id
+    current_user.oauth_token = auth_info[:credentials][:token]
+    current_user.uid = auth_info[:uid]
+    if current_user.save
+      session[:user_id] = current_user.id
     end
     redirect_to dashboard_path
+  end
+
+  private
+  def auth_info
+    request.env["omniauth.auth"]
   end
 end
