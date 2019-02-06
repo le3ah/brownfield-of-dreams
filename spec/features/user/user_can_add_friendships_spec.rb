@@ -12,18 +12,20 @@ describe 'User Friendships' do
       follower_wanda = Follower.new(login: "wandadog", html_url: "https://github.com/wandadog", uid: user.attributes["id"])
 
       followers << follower_wanda
+      # binding.pry
       new_followers = followers.reverse!
 
       follower_2 = new_followers.first
       follower_1 = new_followers.second
       visit '/dashboard'
-
+save_and_open_page
       within ('.followers-list') do
         within (".follower-#{follower_1.login}") do
           expect(page).to_not have_link("Add as Friend")
         end
-        expect(page).to have_link("Add #{follower_2.login} as Friend")
-
+        within (".follower-#{follower_2.login}") do
+          expect(page).to have_link("Add as Friend")
+        end
       end
     end
     describe 'as a logged in user with followings' do
