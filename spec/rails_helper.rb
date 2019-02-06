@@ -19,8 +19,8 @@ VCR.configure do |config|
   config.allow_http_connections_when_no_cassette = true
 end
 
+OmniAuth.config.test_mode = true
 def stub_omniauth
-  OmniAuth.config.test_mode = true
   omniauth_hash = { 'provider' => 'github',
                     'uid' => '12345',
                     'credentials' => {
