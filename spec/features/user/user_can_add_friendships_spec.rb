@@ -13,7 +13,7 @@ describe 'User Friendships' do
       following = facade_user.find_all_following
 
       visit '/dashboard'
-      save_and_open_page
+      
       within '.following-list' do
         within ".follow-2" do
           expect(page).to have_button("Add as Friend")
