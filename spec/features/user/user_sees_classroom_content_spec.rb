@@ -20,16 +20,10 @@ describe 'User' do
     video = create(:video, title: "The Bunny Ears Technique", tutorial: tutorial, position: 1)
     video_1 = create(:video, title: "The Fish Ears Technique", tutorial: tutorial_1, position: 1)
 
-
     visit tutorial_path(tutorial)
     expect(page).to_not have_content(video.title)
 
     visit tutorial_path(tutorial_1)
     expect(page).to have_content(video_1.title)
   end
-
 end
-
-# Currently all tutorials are visible to anyone. We want to make
-# tutorials marked as "classroom content" viewable only if the user is logged in.
-# The tutorials table has a boolean column for classroom that should be used for this story.

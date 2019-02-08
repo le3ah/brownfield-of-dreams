@@ -4,16 +4,20 @@
   <section>
     <%= form_for @user do |form| %>
       <div >
+        <div >
+          <%= form.label :first_name %>
+          <%= form.text_field :first_name, class: "block col-12 field" %>
+        </div>
+        <div>
+          <%= form.label :last_name %>
+          <%= form.text_field :last_name, class: "block col-12 field" %>
+        </div>
         <%= form.label :email %>
+        <% if @user.id %>
         <%= form.email_field :email, class: "block col-12 field" %>
-      </div>
-      <div >
-        <%= form.label :first_name %>
-        <%= form.text_field :first_name, class: "block col-12 field" %>
-      </div>
-      <div>
-        <%= form.label :last_name %>
-        <%= form.text_field :last_name, class: "block col-12 field" %>
+        <% else %>
+        <%= form.email_field :email, value: nil, class: "block col-12 field" %>
+        <% end %>
       </div>
       <div>
         <%= form.label :password %>
