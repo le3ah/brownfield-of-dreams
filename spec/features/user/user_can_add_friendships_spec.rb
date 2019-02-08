@@ -13,9 +13,9 @@ describe 'User Friendships' do
       following = facade_user.find_all_following
 
       visit '/dashboard'
-
+      
       within '.following-list' do
-        within ".follow-1" do
+        within ".follow-2" do
           expect(page).to have_button("Add as Friend")
         end
       end
@@ -40,7 +40,7 @@ describe 'User Friendships' do
       visit '/dashboard'
 
       within '.following-list' do
-        within ".follow-1" do
+        within ".follow-2" do
           expect(page).to have_button("Add as Friend")
           click_button "Add as Friend"
         end
@@ -72,7 +72,7 @@ describe 'User Friendships' do
       visit '/dashboard'
 
       within '.following-list' do
-        within ".follow-1" do
+        within ".follow-2" do
           click_button "Add as Friend"
         end
       end
